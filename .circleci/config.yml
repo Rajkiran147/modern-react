@@ -1,12 +1,11 @@
 version: 2.1
 jobs:
    build:
-     working_directory: ~/happyfoxinc/workflows-web
+     working_directory: ~/src
      docker:
        - image: circleci/node:lts-stretch
          environment:
            CHROME_BIN: "/usr/bin/google-chrome"
-           JOBS: 1
      steps:
        - checkout
        - restore_cache:
